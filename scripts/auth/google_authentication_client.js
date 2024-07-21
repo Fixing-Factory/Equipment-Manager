@@ -42,8 +42,8 @@ export class GoogleAuthenticationClient {
 
   async requestGoogleAuthentication() {
     const queryparams = new URLSearchParams(location.search.substring(1))
-    const recordId = queryparams.get("record-id")
-    recordId && localStorage.setItem("previous-record-id", recordId)
+    const recordId = queryparams.get("equipment-id")
+    recordId && localStorage.setItem("previous-equipment-id", recordId)
     const page = location.pathname
     localStorage.setItem("previous-page", page)
 
