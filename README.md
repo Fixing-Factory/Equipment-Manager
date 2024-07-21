@@ -15,4 +15,4 @@ Then the site will be accessible at http://localhost:8000
 
 ## How this site is published
 
-This repository is configured to publish to GitHub pages https://fixing-factory.github.io/EquipmentManager/ whenever code is pushed to the `main` branch (you can find this in the repository settings under `Pages`)
+This repository is configured to publish to GitHub pages https://fixing-factory.github.io/EquipmentManager/ whenever code is pushed to the `main` branch (you can find this in the repository settings under `Pages`) 
