@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Equipment Testing Information</title>
+  <link rel="icon" type="image/x-icon" href="./static/images/favicon.png">
+  <script src="https://apis.google.com/js/api.js"></script>
+  <link rel="stylesheet" href="./styles/common.css">
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  
+  <script src="./scripts/index.js" type="module" defer></script>
+</head>
+
+<body>
+  <header id="header">
+    <h1>Equipment Testing Information</h1>
+  </header>
+  
+  <form id="record-lookup" method="get" action="./">
+    <input type="text" name="equipment-id-box" id="equipment-id-box" placeholder="Enter an Item's ID"/>
+    <button>Load Item</button>
+  </form>
+
+  <nav id="nav">
+  </nav>
+
+  <dialog id="warning-message" class="disabled"></dialog>
+
+  <form id="equipment-details" class="disabled">
+    <section>
+      <label>Equipment ID:</label>
+      <input id="equipment-id" type="text" disabled/>
+    </section>
+  
+    <section>
+      <label>Item Type</label>
+      <input id="item-type" type="text" disabled/>
+    </section>
+
+    <section>
+      <label>Make/Manufacturer</label>
+      <input id="manufacturer" type="text" disabled/>
+    </section>
+
+    <section>
+      <label>Model Number</label>
+      <input id="model-number" type="text" disabled/>
+    </section>
+
+    <section>
+      <label>Serial Number</label>
+      <input id="serial-number" type="text" disabled/>
+    </section>
+
+    <section>
+      <label>Date Acquired</label>
+      <input id="date-acquired" type="text" disabled/>
+    </section>
+
+    <section>
+      <label>Date Disposed Of</label>
+      <input id="date-disposed" type="text" disabled/>
+    </section>
+
+    <section>
+      <label>Inspection Frequency</label>
+      <input id="inspection-frequency" type="text" disabled/>
+    </section>
+
+    <section>
+      <label>Testing Notes</label>
+      <textarea id="testing-notes" rows="3" cols="18" disabled></textarea>
+    </section>
+  </form>
+</body>
+</html>

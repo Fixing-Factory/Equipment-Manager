@@ -1,0 +1,125 @@
+header {
+  font-size: 2.5rem;
+    display: inline-block;
+  vertical-align: middle;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0vh;
+  display: inline;
+}
+
+nav {
+  font-size: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+a {
+  background-color: var(--secondary-bg-colour);
+  border-radius: 2vh;
+  margin-right: 1vw;
+  margin-top: 1vh;
+  cursor: pointer;
+  text-align: center;
+  padding: 1vh 1vw;
+  flex: 1 0 0;
+}
+
+a:hover {
+  color: var(--primary-bg-colour);
+}
+
+.active {
+  color: var(--primary-bg-colour);
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 1vh 0;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 1vh 0 ;
+}
+
+.disabled {
+  display: none !important;
+}
+
+section {
+  background-color: var(--secondary-bg-colour);
+  border-radius: 2vh;
+  padding: 0.7vh 1vw;
+  width: fit-content;
+  margin-top: 1vw;
+}
+
+input, select, option, textarea, label {
+  display: inline;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+}
+
+input:disabled, textarea:disabled {
+  background-color: whitesmoke
+}
+
+label {
+  display: block;
+}
+
+input, select, textarea {
+  max-width: 90vw;
+  min-width: 30vw;
+}
+
+button {
+  padding: 0.75vh 1vw;
+  border-radius: 0.25vw;
+  display: inline;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  margin-top: 1vw;
+}
+
+form {
+  margin-bottom: 2vh;
+}
+
+dialog {
+  margin: auto;
+  position: relative;
+  text-align: center;
+}
+
+#advisory-dialog {
+  padding: 5vh 5vw;
+  font-size: 3rem;
+  background-color: greenyellow;
+}
+
+#warning-message {
+  display: block;
+  margin: 0;
+  margin: 5vh 0;
+}
+
+.disabled {
+  visibility: hidden;
+}
+
+.enabled {
+  visibility: visible;
+}
+
+#logo-link {
+  background-color: unset;
+}
+
+#logo-container {
+  display: inline-block;
+}
