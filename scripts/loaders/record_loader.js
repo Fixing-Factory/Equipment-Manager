@@ -26,7 +26,7 @@ export class RecordLoader {
   async loadRecordRow() {
     const params = new URLSearchParams(location.search.substring(1))
     const recordId = params.get("equipment-id")
-    document.getElementById("equipment-id-box").value = recordId
+    document.getElementById("equipment-id").value = recordId
 
     if (recordId) {
       const rowData = await this.recordFetcher.loadRecordRow(recordId)

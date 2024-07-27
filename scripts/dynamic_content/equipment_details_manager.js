@@ -3,7 +3,7 @@ import { EquipmentDetailsViewModel } from "../data/equipment_details_view_model.
 export class EquipmentDetailsManager {
   constructor() {
     this.equipmentDetailsElement = document.getElementById("equipment-details")
-    this.equipmentIdElement = document.getElementById("equipment-id")
+    this.equipmentIdElement = document.getElementById("equipment-id-display")
     this.itemTypeElement = document.getElementById("item-type")
     this.manufacturerElement = document.getElementById("manufacturer")
     this.modelNumberElement = document.getElementById("model-number")
@@ -23,7 +23,7 @@ export class EquipmentDetailsManager {
 
     this.equipmentIdElement.value = viewModel.equipmentId
     this.itemTypeElement.value = viewModel.itemType
-    this.manufacturerElement.value = viewModel.itemType
+    this.manufacturerElement.value = viewModel.make
     this.modelNumberElement.value = viewModel.modelNumber
     this.serialNumberElement.value = viewModel.serialNumber
     this.dateAcquiredElement.value = viewModel.dateAcquired
