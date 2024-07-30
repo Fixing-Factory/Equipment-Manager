@@ -16,9 +16,14 @@ export class SpreadsheetRecordFetcher {
     }
   }
 
+  async getLastInspectionRowNumber() {
+    const inspectionRows = await this.fetchSpreadsheetRows(SPREADSHEETCONFIG.spreadsheetId, SPREADSHEETCONFIG.inspectionSheetName)
+    return this.findLastRowNumber(inspectionRows)
+  }
+
   async fetchSpreadsheetRows(spreadsheetId, sheetName) {
     const request = new Request(this.buildSheetUrl(spreadsheetId, sheetName))
-    const accessToken = await this.googleAuthclient.fetchTokenForAnonymousAccess()
+    const accessToken = await this.googleAuthclient.fetchToken()
 
     request.headers.set("Authorization", `Bearer ${accessToken}`)
 
@@ -47,6 +52,19 @@ export class SpreadsheetRecordFetcher {
 
       return [targetRow, targetRowIndex, sheetName]
     } 
+  }
+
+  findLastRowNumber(rows) {
+    let currentRow = 1
+
+    for (const rowIndex in rows) {
+      if (rows[rowIndex]?.[0] === undefined || rows[rowIndex]?.[0] == "") {
+        return currentRow
+      }
+      currentRow += 1
+    }
+
+    return currentRow
   }
 
   buildSheetUrl(spreadsheetId, sheetName) {

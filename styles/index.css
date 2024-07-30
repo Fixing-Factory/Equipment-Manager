@@ -123,3 +123,9 @@ dialog {
 #logo-container {
   display: inline-block;
 }
+
+input[type=checkbox] {
+  transform: scale(4.0);
+  min-width: 0vw;
+  margin: 2vh;
+}

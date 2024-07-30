@@ -1,9 +1,9 @@
 import { GoogleAuthenticationClient } from "./auth/google_authentication_client.js"
-import { RecordLoader } from "./loaders/record_loader.js"
+import { EquipmentRecordLoader } from "./loaders/equipment_record_loader.js"
 
 async function main() {
   const authChecker = new GoogleAuthenticationClient()
-  const recordLoader = new RecordLoader()
+  const recordLoader = new EquipmentRecordLoader()
   const rowIndex = await recordLoader.loadRecordData()
 }
 

@@ -2,7 +2,7 @@ import { EquipmentDetailsManager } from "../dynamic_content/equipment_details_ma
 import { WarningMessageManager } from "../dynamic_content/warning_message_manager.js"
 import { SpreadsheetRecordFetcher } from "../spreadsheet_api/spreadsheet_record_fetcher.js"
 
-export class RecordLoader {
+export class EquipmentRecordLoader {
   constructor() {
     this.equipmentDetailsManager = new EquipmentDetailsManager()
     this.recordFetcher = new SpreadsheetRecordFetcher()

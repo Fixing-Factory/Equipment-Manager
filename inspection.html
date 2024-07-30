@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Equipment Testing Information</title>
+  <link rel="icon" type="image/x-icon" href="./static/images/favicon.png">
+  <script src="https://apis.google.com/js/api.js"></script>
+  <link rel="stylesheet" href="./styles/common.css">
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  
+  <script src="./scripts/inspection_pages/index.js" type="module" defer></script>
+</head>
+
+<body>
+  <header id="header">
+    <h1>New Inspection Form</h1>
+  </header>
+
+  <form id="record-lookup" method="get" action="./inspection.html">
+    <input type="text" name="equipment-id" id="equipment-id" placeholder="Enter an Item's ID"/>
+    <button>Load Item</button>
+  </form>
+
+  <nav id="nav">
+  </nav>
+
+  <dialog id="warning-message" class="disabled"></dialog>
+
+  <dialog id="advisory-dialog"></dialog>
+
+  <div id="inspection-forms" class="disabled">
+    <form id="equipment-details">  
+      <section>
+        <label>Item Type</label>
+        <input id="item-type" type="text" disabled/>
+      </section>
+
+      <section>
+        <label>Make/Manufacturer</label>
+        <input id="manufacturer" type="text" disabled/>
+      </section>
+    </form>
+
+    <form id="inspection-form">  
+      <section>
+        <label>Date of Inspection</label>
+        <input id="inspection-date" name="inspection-date" type="date" required/>
+      </section>
+
+      <section>
+        <label>Name of Inspector</label>
+        <input id="inspector-name" name="inspector-name" type="text" required/>
+      </section>
+
+      <section>
+        <label>Plug Inspected?</label>
+        <input id="plug-inspected" name="plug-inspected" type="checkbox"/>
+      </section>
+
+      <section>
+        <label>Flex Inspected?</label>
+        <input id="flex-inspected" name="flex-inspected" type="checkbox"/>
+      </section>
+
+      <section>
+        <label>Body Inspected?</label>
+        <input id="body-inspected" name="body-inspected" type="checkbox"/>
+      </section>
+
+      <section>
+        <label>Earth Resistance in Ohms (if applicable)</label>
+        <input id="earth-resistance" name="earth-resistance" type="number" min="0" step="0.01"/>
+      </section>
+
+      <section>
+        <label>Insulation Resistance in MOhms (if applicable)</label>
+        <input id="insulation-resistance" name="insulation-resistance" type="number" min="0" step="1"/>
+      </section>
+
+      <section>
+        <label>Polarity Tested (adapters only)</label>
+        <input id="polarity-test" name="polarity-test" type="checkbox"/>
+      </section>
+
+      <section>
+        <label>Function Tested</label>
+        <input id="function-test" name="function-test" type="checkbox"/>
+      </section>
+
+      <section>
+        <label>Suitable for Environment</label>
+        <input id="environment-suitability" name="environment-suitability" type="checkbox"/>
+      </section>
+
+      <section>
+        <label>Suitable for Continued Use</label>
+        <input id="continued-use-suitability" name="continued-use-suitability" type="checkbox"/>
+      </section>
+
+      <section>
+        <label>Outcome</label>
+        <select name="outcome" id="outcome" type="text" required>
+          <option value="Passed">Passed</option>
+          <option value="Failed">Failed</option>
+          <option value="" selected>Empty</option>
+        </select>
+      </section>
+
+      <section>
+        <label>Notes</label>
+        <textarea name="notes" id="notes" rows="3" cols="18"></textarea>
+      </section>
+
+      <button type="submit">Add Inspection!</button>
+    </form>
+  </div>
+</body>

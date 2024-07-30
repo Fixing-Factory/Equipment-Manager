@@ -4,7 +4,7 @@ export class GoogleAuthenticationClient {
     this.clientId = "575297305808-p3dnopudl1cardivdq3mjspp09sl9st0.apps.googleusercontent.com"
   }
 
-  async fetchTokenForAnonymousAccess() {
+  async fetchToken() {
     const localAccessToken =  localStorage.getItem("google-access-token")
 
     if (!localAccessToken) {
