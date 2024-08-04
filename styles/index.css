@@ -17,7 +17,6 @@ nav {
 }
 
 a {
-  background-color: var(--secondary-bg-colour);
   border-radius: 2vh;
   margin-right: 1vw;
   margin-top: 1vh;
@@ -27,7 +26,23 @@ a {
   flex: 1 0 0;
 }
 
-a:hover {
+#navigation-dialog{
+  margin: 0;
+}
+
+#navigation-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  background-color: var(--secondary-bg-colour);
+  color: white;
+  margin: 1vw;
+  font-size: 2rem;
+}
+
+.nav-link:hover {
   color: var(--primary-bg-colour);
 }
 
